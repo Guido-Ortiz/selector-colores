@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         name, 
         colors 
     })
-    // console.log(newSupplier)
+    
     res.send('Palette added succesfully!')
 })
 
