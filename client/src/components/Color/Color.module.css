@@ -1,0 +1,53 @@
+.wrapper {
+    /* position: relative; */
+    /* border: 1px solid greenyellow; */
+}
+
+.circle {
+    width: 73px;
+    height: 73px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+
+  .circleOpen {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 15px;
+    /* position: absolute; */
+
+    /* position: relative; */
+  }
+
+  .picker {
+    position: absolute;
+    top: 100px;
+    left: -160px;
+  }
+  
+  .circle span {
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .circle:hover {
+    cursor: pointer;
+  }

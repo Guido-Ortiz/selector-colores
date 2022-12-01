@@ -7,12 +7,11 @@ import s from './Colors.module.css';
 
 const Colors = () => {
 
-  const [color, setColor] = useState(['lightblue','lightblue','lightblue','lightblue','lightblue'])
-  // const [color, setColor] = useState('lightblue')
+  const [color, setColor] = useState('lightblue')
   const [colors, setColors] = useState([])
   const [open, setOpen] = useState(false)
 
-  
+
 
   const dispatch = useDispatch()
 
@@ -48,10 +47,7 @@ const Colors = () => {
 
   const handleClose = () => {
     setOpen(false)
-    setColors([...colors, color])
-    setColors2([...colors2, color2])
     dispatch(singleColor(color))
-    // setColors([])
   }
 
   const [color2, setColor2] = useState('lightblue')
@@ -131,7 +127,7 @@ const Colors = () => {
 
 
 
-
+console.log(colorsArray[0])
 
   return (
     <div className={s.container}>
@@ -139,7 +135,12 @@ const Colors = () => {
 
         {
           open
-            ? (colorsArray[0] ? <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colorsArray[0] }} /> : <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colors[colors.length - 1] }} />
+            ? (colorsArray[0] ? <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colorsArray[0] }} />
+                    : <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colors[colors.length - 1] }}>
+                        <div style={{ position: 'relative', top: '200px' }}>
+                          <ChromePicker width='249px' color={color} onChange={(updatedColor) => handleChange(updatedColor)} disableAlpha/>
+                        </div>
+                      </div>
             )
 
             : <div className={s.circle} onClick={(e) => handleOpen(e)} style={{ backgroundColor: color }}>
@@ -149,17 +150,31 @@ const Colors = () => {
 
         {
           open2
-            ? (colorsArray[1] ? <div className={s.circleOpen} onClick={(e) => handleClose2(e)} style={{ backgroundColor: colorsArray[1] }} /> : <div className={s.circleOpen} onClick={(e) => handleClose2(e)} style={{ backgroundColor: colors2[colors2.length - 1] }} />
-            )
-
+            ? (colorsArray[1] 
+                ? <div className={s.circleOpen} onClick={(e) => handleClose2(e)} style={{ backgroundColor: colorsArray[1] }} />
+                : <div className={s.circleOpen} onClick={(e) => handleClose2(e)} style={{ backgroundColor: colors2[colors2.length - 1] }}>
+                    <div style={{ position: 'relative', top: '200px' }}>
+                      <ChromePicker width='249px' color={color2} onChange={(updatedColor) => handleChange(updatedColor)} />
+                    </div>
+                  </div>
+              )
             : <div className={s.circle} onClick={(e) => handleOpen2(e)} style={{ backgroundColor: color2 }}>
-              <span>+</span>
-            </div>
+                <span>+</span>
+              </div>
         }
 
-{
+        {
           open3
-            ? (colorsArray[2] ? <div className={s.circleOpen} onClick={(e) => handleClose3(e)} style={{ backgroundColor: colorsArray[2] }} /> : <div className={s.circleOpen} onClick={(e) => handleClose3(e)} style={{ backgroundColor: colors3[colors3.length - 1] }} />
+            ? (colorsArray[2] ? <div className={s.circleOpen} onClick={(e) => handleClose3(e)} style={{ backgroundColor: colorsArray[2] }} />
+
+
+              : <div className={s.circleOpen} onClick={(e) => handleClose3(e)} style={{ backgroundColor: colors3[colors3.length - 1] }}>
+
+                <div style={{ position: 'relative', top: '200px' }}>
+
+                  <ChromePicker width='249px' color={color3} onChange={(updatedColor) => handleChange(updatedColor)} />
+                </div>
+              </div>
             )
 
             : <div className={s.circle} onClick={(e) => handleOpen3(e)} style={{ backgroundColor: color3 }}>
@@ -167,9 +182,18 @@ const Colors = () => {
             </div>
         }
 
-{
+        {
           open4
-            ? (colorsArray[3] ? <div className={s.circleOpen} onClick={(e) => handleClose4(e)} style={{ backgroundColor: colorsArray[3] }} /> : <div className={s.circleOpen} onClick={(e) => handleClose4(e)} style={{ backgroundColor: colors4[colors4.length - 1] }} />
+            ? (colorsArray[3] ? <div className={s.circleOpen} onClick={(e) => handleClose4(e)} style={{ backgroundColor: colorsArray[3] }} />
+
+
+              : <div className={s.circleOpen} onClick={(e) => handleClose4(e)} style={{ backgroundColor: colors4[colors4.length - 1] }}>
+
+                <div style={{ position: 'relative', top: '200px' }}>
+
+                  <ChromePicker width='249px' color={color4} onChange={(updatedColor) => handleChange(updatedColor)} />
+                </div>
+              </div>
             )
 
             : <div className={s.circle} onClick={(e) => handleOpen4(e)} style={{ backgroundColor: color4 }}>
@@ -177,9 +201,17 @@ const Colors = () => {
             </div>
         }
 
-{
+        {
           open5
-            ? (colorsArray[4] ? <div className={s.circleOpen} onClick={(e) => handleClose5(e)} style={{ backgroundColor: colorsArray[4] }} /> : <div className={s.circleOpen} onClick={(e) => handleClose5(e)} style={{ backgroundColor: colors5[colors5.length - 1] }} />
+            ? (colorsArray[4] ? <div className={s.circleOpen} onClick={(e) => handleClose5(e)} style={{ backgroundColor: colorsArray[4] }} />
+
+
+              : <div className={s.circleOpen} onClick={(e) => handleClose5(e)} style={{ backgroundColor: colors5[colors5.length - 1] }}>
+                <div style={{ position: 'relative', top: '200px' }}>
+
+                  <ChromePicker width='249px' color={color5} onChange={(updatedColor) => handleChange(updatedColor)} />
+                </div>
+              </div>
             )
 
             : <div className={s.circle} onClick={(e) => handleOpen5(e)} style={{ backgroundColor: color5 }}>
@@ -189,7 +221,7 @@ const Colors = () => {
 
       </div>
       <div className={s.container__picker}>
-        <ChromePicker width='249px' color={color2} onChange={(updatedColor) => handleChange(updatedColor)} />
+        {/* <ChromePicker width='249px' color={color2} onChange={(updatedColor) => handleChange(updatedColor)} /> */}
         <div>
           <div>Name</div>
           <div>
