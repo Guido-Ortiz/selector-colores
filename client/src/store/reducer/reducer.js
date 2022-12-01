@@ -1,7 +1,20 @@
-import { SINGLE_COLOR } from "../actions/constant"
+import { GET_PALETTES, POST_PALETTE, SINGLE_COLOR } from "../actions/constant"
 
 const initialState = {
     palettes: [],
+    // palettes: [{
+    //     name: 'palette #1',
+    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
+    // }, {
+    //     name: 'palette #1',
+    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
+    // },{
+    //     name: 'palette #1',
+    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
+    // }, {
+    //     name: 'palette #1',
+    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
+    // }],
     palette: []
 }
 
@@ -12,6 +25,17 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 palette: [...state.palette, action.payload]
+            }
+
+        case GET_PALETTES:
+            return {
+                ...state,
+                palettes: action.payload
+            }
+
+        case POST_PALETTE:
+            return {
+                ...state
             }
      
 
