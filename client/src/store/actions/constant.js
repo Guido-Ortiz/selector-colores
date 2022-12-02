@@ -1,3 +1,4 @@
 export const SINGLE_COLOR = 'SINGLE_COLOR';
 export const GET_PALETTES = 'GET_PALETTES';
 export const POST_PALETTE = 'POST_PALETTE';
+export const DELETE_PALETTE = 'DELETE_PALETTE';

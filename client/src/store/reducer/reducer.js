@@ -1,4 +1,4 @@
-import { GET_PALETTES, POST_PALETTE, SINGLE_COLOR } from "../actions/constant"
+import { DELETE_PALETTE, GET_PALETTES, POST_PALETTE, SINGLE_COLOR } from "../actions/constant"
 
 const initialState = {
     palettes: [],
@@ -28,12 +28,18 @@ const rootReducer = (state = initialState, action) => {
             }
 
         case GET_PALETTES:
+            // console.log(action.payload)
             return {
                 ...state,
                 palettes: action.payload
             }
 
         case POST_PALETTE:
+            return {
+                ...state
+            }
+
+        case DELETE_PALETTE: 
             return {
                 ...state
             }

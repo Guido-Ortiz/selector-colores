@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
     try {
         // consulto a la db --> SELECT * FROM palette;
         const response = await Palette.findAll()
-
         res.send(response)
 
     } catch (e) {

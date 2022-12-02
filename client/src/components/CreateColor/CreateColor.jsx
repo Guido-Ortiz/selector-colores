@@ -1,44 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChromePicker } from 'react-color';
 import { useDispatch, useSelector } from 'react-redux';
-import { postPalette } from '../../store/actions/actions';
+import { getPalettes, postPalette } from '../../store/actions/actions';
 import Color from '../Color/Color';
 import s from './CreateColor.module.css';
 
 const CreateColor = () => {
 
-    const [name, setName] = useState({
-        name: '',
-        colors: []
-    })
-    console.log(name)
+    const [name, setName] = useState('')
 
     const palette = useSelector(state => state.palette)
-    console.log(name)
+    
     const dispatch = useDispatch()
 
-    const handleChange = (e) => {
-        setName({
-            ...name,
-            [e.target.name]: e.target.value
-        })
-    }
-
+    // const handleChange = (e) => {
+    //     setName({
+    //         ...name,
+    //         [e.target.name]: e.target.value
+    //     })
+    // }
+    
     const handleClick = (e) => {
-        console.log(name)
-        // console.log('click')
         e.preventDefault()
-        setName({
-            ...name,
-            colors: [...name.colors, palette]
-        })
-        console.log(name)
-        // dispatch(postPalette(name))
-        setName({
-            name: '',
-            colors: []
-        })
-        console.log(name)
+        let data = {}
+        data.name = name
+        data.colors = palette
+        dispatch(postPalette(data))
+        window.location.reload() 
+        setName('')
     }
 
     return (
@@ -53,7 +42,10 @@ const CreateColor = () => {
             <div className={s.wrapper__input}>
                 <div className={s.label}>Name</div>
                 <div className={s.input__container}>
-                    <input type='text' placeholder='Website color scheme' name='name' value={name.name} onChange={(e) => handleChange(e)} />
+                    <input type='text' placeholder='Website color scheme' name='name' value={name} 
+                    // onChange={(e) => handleChange(e)} 
+                    onChange={(e) => setName(e.target.value)}
+                    />
                     { palette.length === 5 
                     ? <button onClick={handleClick}>+</button>
                     : <button disabled>+</button>}

@@ -29,3 +29,13 @@ export function postPalette(payload){
         return response
     }
 }
+
+
+export function deletePalette(id){
+    console.log(id)
+    return async function(dispatch){
+        const response = await axios.delete(`http://localhost:3001/palette/${id}`)
+        console.log(response)
+        return response
+    }
+}

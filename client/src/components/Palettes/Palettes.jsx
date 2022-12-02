@@ -12,7 +12,7 @@ const Palettes = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        getPalettes()
+        dispatch(getPalettes())
     }, [dispatch])
 
     // if(palettes.length === 0){
