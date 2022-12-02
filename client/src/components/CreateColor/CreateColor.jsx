@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPalettes, postPalette } from '../../store/actions/actions';
+import { postPalette } from '../../store/actions/actions';
 import Color from '../Color/Color';
 import s from './CreateColor.module.css';
 
@@ -12,13 +12,6 @@ const CreateColor = () => {
     const palette = useSelector(state => state.palette)
     
     const dispatch = useDispatch()
-
-    // const handleChange = (e) => {
-    //     setName({
-    //         ...name,
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
     
     const handleClick = (e) => {
         e.preventDefault()
@@ -31,7 +24,7 @@ const CreateColor = () => {
     }
 
     return (
-        <div className={s.wrapper} style={{border: '1px solid red'}}>
+        <div className={s.wrapper}>
             <div className={s.circles}>
                 <Color index={0} />
                 <Color index={1} />
@@ -42,19 +35,16 @@ const CreateColor = () => {
             <div className={s.wrapper__input}>
                 <div className={s.label}>Name</div>
                 <div className={s.input__container}>
-                    <input type='text' placeholder='Website color scheme' name='name' value={name} 
-                    // onChange={(e) => handleChange(e)} 
-                    onChange={(e) => setName(e.target.value)}
-                    />
-                    { palette.length === 5 
-                    ? <button onClick={handleClick}>+</button>
-                    : <button disabled>+</button>}
+                    <input type='text' placeholder='Website color scheme' name='name' value={name} onChange={(e) => setName(e.target.value)} />
+                    { name 
+                        ? <button onClick={handleClick}>+</button>
+                        : <button disabled>+</button>
+                    }
                 </div>
             </div>
-            {/* <div style={{position: 'relative', top: '7px', left: '-200px'}}>
-
-            <ChromePicker width='249px' />
-            </div> */}
+            <div style={{position: 'relative', top: '15px', left: '-218px', zIndex: '-1'}}>
+                <ChromePicker width='249px'disableAlpha />
+            </div>
         </div>
     )
 }

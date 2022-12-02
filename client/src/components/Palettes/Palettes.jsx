@@ -15,31 +15,22 @@ const Palettes = () => {
         dispatch(getPalettes())
     }, [dispatch])
 
-    // if(palettes.length === 0){
-    //     return(
-    //         <p>No palettes saved yet!</p>
-    //     )
-    // }
-    
     return (
         <div className={s.wrapper}>
             <div className={s.title}>Saved palettes</div>
-            {/* {
-                palettes.length === 0 && <p>No palettes saved yet!</p>
-            } */}
+            
             <div className={s.palettes}>
-
-            {
-                palettes.length > 0
-                ? palettes.map(e => {
-                    return(
-                        <div key={e.id}>
-                            <Palette id={e.id} name={e.name} colors={e.colors} />
-                        </div>
-                    )
-                })
-                : <p>No palettes saved yet!</p>
-            }
+                {
+                    palettes.length > 0
+                    ? palettes.map(e => {
+                        return(
+                            <div key={e.id}>
+                                <Palette id={e.id} name={e.name} colors={e.colors} />
+                            </div>
+                        )
+                    })
+                    : <p>No palettes saved yet!</p>
+                }
             </div>
         </div>
     )

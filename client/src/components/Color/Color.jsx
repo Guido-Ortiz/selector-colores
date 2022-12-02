@@ -6,7 +6,7 @@ import { singleColor } from '../../store/actions/actions';
 
 const Color = ({ index }) => {
     const [open, setOpen] = useState(false)
-    const [color, setColor] = useState('black')
+    const [color, setColor] = useState('#151515')
     const [colors, setColors] = useState([])
 
     const colorsArray = useSelector(state => state.palette)
@@ -36,7 +36,10 @@ const Color = ({ index }) => {
                 open
                     ? (colorsArray[index] ? <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colorsArray[index] }} />
                         
-                        : <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colors[colors.length - 1] }} />
+                        : <div className={s.circleOpen} onClick={(e) => handleClose(e)} 
+                        style={{ backgroundColor: colors[colors.length - 1] }} 
+                        // style={{ backgroundColor: '#151515' }}
+                        />
                         
                     )
 

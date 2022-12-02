@@ -30,14 +30,11 @@
     align-items: center;
     text-align: center;
     margin: 10px 15px;
-    /* position: absolute; */
-
-    /* position: relative; */
   }
 
   .picker {
     position: absolute;
-    top: 100px;
+    top: 109px;
     left: -160px;
   }
   

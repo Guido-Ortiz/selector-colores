@@ -1,6 +1,4 @@
 .wrapper {
-    /* border: 1px solid yellow; */
-    /* width: 80vw; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,5 +21,12 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    /* border: 1px solid green; */
+}
+
+.palettes p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
 }

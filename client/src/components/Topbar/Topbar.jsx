@@ -6,7 +6,7 @@ const Topbar = () => {
   return (
     <div className={s.container}>
         <div className={s.icon}>
-            <PaletteIcon />
+            <PaletteIcon style={{color: '#fff'}}/>
         </div>
         <div className={s.title}>Color palette generator</div>
     </div>

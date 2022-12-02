@@ -12,8 +12,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* width: 140vw; */
-    /* border: 1px solid blue; */
     position: absolute;
     width: 249px;
     height: 85px;
@@ -37,7 +35,6 @@
     position: relative;
     top: 120px;
     left: 160px;
-    /* border: 1px solid greenyellow; */
   }
 
   .label {
@@ -53,7 +50,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* border: 1px solid salmon; */
   }
 
   .input__container input {
@@ -64,6 +60,7 @@
     background-color: var(--color-principal);
     color: #FFFFFF;
     margin-right: 12px;
+    outline: none;
   }
 
   ::placeholder{
