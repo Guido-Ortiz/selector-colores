@@ -3,15 +3,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 282px;
 }
 
 .title {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
     color: #FFFFFF;
 }
 
@@ -26,7 +23,46 @@
 .palettes p {
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
     color: #FFFFFF;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:425px){
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 130px;
+    }
+    
+    .title {
+        font-size: 20px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+      
+    .palettes p {
+        font-size: 18px;
+        line-height: 22px;
+        padding-left: 10px;
+    }
+}
+
+
+
+@media only screen and (min-width:426px) and (max-width:1920px){
+    .wrapper {
+        padding-left: 282px;
+    }
+    
+    .title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .palettes p {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }

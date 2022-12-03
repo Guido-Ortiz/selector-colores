@@ -29,7 +29,7 @@ const Palettes = () => {
                             </div>
                         )
                     })
-                    : <p>No palettes saved yet!</p>
+                    : <p>No palettes saved!</p>
                 }
             </div>
         </div>
