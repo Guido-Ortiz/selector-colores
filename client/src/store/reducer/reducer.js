@@ -2,19 +2,6 @@ import { DELETE_PALETTE, GET_PALETTES, POST_PALETTE, SINGLE_COLOR } from "../act
 
 const initialState = {
     palettes: [],
-    // palettes: [{
-    //     name: 'palette #1',
-    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
-    // }, {
-    //     name: 'palette #1',
-    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
-    // },{
-    //     name: 'palette #1',
-    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
-    // }, {
-    //     name: 'palette #1',
-    //     colors: ['blue', 'red', 'orange', 'lightblue', 'yellow']
-    // }],
     palette: []
 }
 
@@ -28,7 +15,6 @@ const rootReducer = (state = initialState, action) => {
             }
 
         case GET_PALETTES:
-            // console.log(action.payload)
             return {
                 ...state,
                 palettes: action.payload

@@ -20,12 +20,13 @@ router.delete('/:id', async (req, res) => {
     const { id } = req.params
     try{
         const { id } = req.params
-        // const { id } = req.body
+        
         await Palette.destroy({
-            // where: {id: id}
             where: {id: id}
         })
+
         res.send('Palette deleted succesfully')
+        
     } catch(e) {
         console.log(e)
     }

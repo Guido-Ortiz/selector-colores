@@ -42,9 +42,7 @@ const CreateColor = () => {
                     }
                 </div>
             </div>
-            <div className={s.picker} 
-            // style={{position: 'relative', top: '15px', left: '-218px', zIndex: '-1'}}
-            >
+            <div className={s.picker}>
                 <ChromePicker width='249px'disableAlpha />
             </div>
         </div>

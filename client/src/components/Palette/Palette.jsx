@@ -9,8 +9,6 @@ const Palette = ({ id, name, colors }) => {
 
     const dispatch = useDispatch()
 
-    console.log(id)
-
     const handleDelete = (e) => {
         e.preventDefault()
         dispatch(deletePalette(id))

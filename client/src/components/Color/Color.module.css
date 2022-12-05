@@ -1,11 +1,4 @@
-.wrapper {
-    /* position: relative; */
-    /* border: 1px solid greenyellow; */
-}
-
 .circle {
-    /* width: 73px;
-    height: 73px; */
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -14,7 +7,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* margin: 10px 15px; */
   }
 
 
@@ -33,7 +25,6 @@
   }
 
   .picker {
-    /* position: absolute; */
     top: 109px;
     left: -160px;
   }
@@ -55,14 +46,6 @@
     .circle {
       width: 50px;
       height: 50px;
-      /* -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      border: 1px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center; */
       margin: 10px;
     }
   
@@ -70,15 +53,6 @@
     .circleOpen {
       width: 60px;
       height: 60px;
-      /* -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      border: 1px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 10px 15px; */
     }
   
     .picker {
@@ -86,17 +60,6 @@
       top: 96px;
       left: 63px;
     }
-    
-    /* .circle span {
-      line-height: 24px;
-      font-size: 24px;
-      font-weight: 700;
-      color: white;
-    } */
-    
-    /* .circle:hover {
-      cursor: pointer;
-    } */
   }
 
 
@@ -120,15 +83,6 @@
     .circleOpen {
       width: 100px;
       height: 100px;
-      /* -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      border: 1px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin: 10px 15px; */
     }
   
     .picker {
@@ -136,16 +90,4 @@
       top: 109px;
       left: -166px;
     }
-    
-    /* .circle span {
-      line-height: 24px;
-      font-size: 24px;
-      font-weight: 700;
-      color: white;
-    }
-    
-    .circle:hover {
-      cursor: pointer;
-    } */
-  
   }

@@ -35,23 +35,20 @@ const Color = ({ index }) => {
             {
                 open
                     ? (colorsArray[index] ? <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colorsArray[index] }} />
-                        
-                        : <div className={s.circleOpen} onClick={(e) => handleClose(e)} 
-                        style={{ backgroundColor: colors[colors.length - 1] }} 
-                        // style={{ backgroundColor: '#151515' }}
-                        />
-                        
+
+                        : <div className={s.circleOpen} onClick={(e) => handleClose(e)} style={{ backgroundColor: colors[colors.length - 1] }} />
+
                     )
 
                     : <div className={s.circle} onClick={(e) => handleOpen(e)} style={{ backgroundColor: color }}>
                         <span>+</span>
                     </div>
             }
-            
+
             {
                 open && <div className={s.picker}>
-                    <ChromePicker width='249px' color={color} onChange={(updatedColor) => handleChange(updatedColor)} disableAlpha/>
-                    </div>
+                    <ChromePicker width='249px' color={color} onChange={(updatedColor) => handleChange(updatedColor)} disableAlpha />
+                </div>
             }
         </div>
     )
