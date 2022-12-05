@@ -3,6 +3,7 @@ const { Palette } = require("../db");
 
 const router = Router();
 
+// post palette
 router.post('/', async (req, res) => {
     
     const { name, colors } = req.body
@@ -15,7 +16,7 @@ router.post('/', async (req, res) => {
     res.send('Palette added succesfully!')
 })
 
-
+// delete palette
 router.delete('/:id', async (req, res) => {
     const { id } = req.params
     try{

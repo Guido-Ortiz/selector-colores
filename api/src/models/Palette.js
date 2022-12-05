@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
+  // defino el modelo Palette
   sequelize.define('palette', {
     id: {
       type: DataTypes.UUID,
